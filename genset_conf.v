@@ -29,6 +29,7 @@ Definition exactlyOne (a b c : Prop) : Prop :=
   ~ (a /\ c) /\
   ~ (b /\ c).
 
+(* configuration logic *)
 Definition Valid (c : Configuration) : Prop :=
   exactlyOne c.(stage3) c.(stage5) c.(tier4) /\
   exactlyOne c.(kva250) c.(kva400) c.(kva560) /\
